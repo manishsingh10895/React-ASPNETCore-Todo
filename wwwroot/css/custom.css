@@ -1,0 +1,28 @@
+body {
+    background-image: url('../images/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+}
+
+.todo-header {
+    border-bottom: 2px orange solid;
+    margin-bottom: 50px;
+}
+
+.btn-todo-item-fab {
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px grey;
+    margin: 5px;
+    vertical-align: middle; 
+}
+
+.task-box {
+    padding: 20px;
+}
+
+.btn-new {
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px lightgrey;
+}
+
