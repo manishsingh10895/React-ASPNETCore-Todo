@@ -10,6 +10,39 @@ Requirements
 
 **First change mysql connection string in appsettings.json** 
 
+If you need sample data then TodoDatabaseSeeder can do this for you
+
+```cs
+    public void ConfigureServices(IServiceCollection services)
+        {
+            // Add framework services.
+            services.AddMvc();
+
+            // Fetch mysql connection string
+            string connection = Configuration.GetConnectionString("MySql");
+
+            // Add Sample Data in database 
+            // Comment this section after first time
+            TodoContext context = TodoContextFactory.Create(connection);
+            context.AddRange(TodoDatabaseSeeder.GetSampleData());
+            context.SaveChanges();
+
+            services.AddDbContext<TodoContext>(options => options.UseMySQL(connection));
+
+            services.AddOptions();
+
+            services.AddScoped<ITodoRepository, TodoRepository>();
+        }
+```
+
+run 
+
+```bash
+    dotnet migrations add "Initial"
+```
+
+for migrating database to MySQL
+
 
 To run this app 
 ```bash
