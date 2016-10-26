@@ -78,6 +78,8 @@ export class TodoListItem extends React.Component<any, any>
             'cursor': 'pointer',
             'borderRadius': '5px',
             'margin': '6px',
+            'marginTop': '10px',
+            'background': 'white',
             // 'border': '1px solid black',
             boxShadow: '1px 1px 6px grey'
         };
@@ -89,7 +91,7 @@ export class TodoListItem extends React.Component<any, any>
         // If This task is deleted return nothing
         if(this.state.isDeleted) return ;
 
-        
+
         return <div>
             <div style={taskStyles} className="col-sm-12 task-box" onClick={this.goToDetail.bind(this)} >
                 <div className="pull-right">
