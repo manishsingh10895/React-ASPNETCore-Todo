@@ -48,6 +48,9 @@ To run this app
 ```bash
     git clone https://github.com/manishsingh10895/React-ASPNETCore-Todo.git ReactCore
     cd ReactCore
+    npm i
+    npm i -g webpack
+    webpack
     dotnet restore
     dotnet run 
 ``` 
