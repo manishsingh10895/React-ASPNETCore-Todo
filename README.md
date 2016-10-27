@@ -38,7 +38,7 @@ If you need sample data then TodoDatabaseSeeder can do this for you
 run 
 
 ```bash
-    dotnet migrations add "Initial"
+    dotnet ef migrations add "Initial"
 ```
 
 for migrating database to MySQL
