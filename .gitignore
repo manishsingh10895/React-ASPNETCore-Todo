@@ -32,6 +32,9 @@ Obj/
 
 # Workaround for https://github.com/aspnet/JavaScriptServices/issues/235
 !/wwwroot/dist/_placeholder.txt
+!/wwwroot/dist/vendor.css
+!/wwwroot/dist/vendor.js
+!/wwwroot/dist/vendor-manifest.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
